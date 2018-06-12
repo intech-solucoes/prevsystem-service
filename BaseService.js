@@ -1,9 +1,6 @@
 import axios from "axios";
 
-var path = require('path');
-global.appRoot = path.resolve(__dirname);
-
-var config = require(appRoot + "/config");
+var config = require("../../src/config.json");
 
 export default class BaseService {
     CriarRequisicao(tipo, url, data) {
