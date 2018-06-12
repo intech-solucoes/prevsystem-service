@@ -1,0 +1,8 @@
+{
+  "name": "prevsystem-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/intech-solucoes/prevsystem-service.git",
+  "author": "Rony Moura <ronymmoura@gmail.com>",
+  "license": "MIT"
+}
