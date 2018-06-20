@@ -9,8 +9,8 @@ class UsuarioService extends BaseService {
         return this.CriarRequisicao("POST", "/usuario/login", { Cpf: cpf, Senha: senha });
     }
 
-    PrimeiroAcesso(cpf, dataNascimento) {
-        this.CriarRequisicao("POST", "/usuario/criarAcesso", { Cpf: cpf, DataNascimento: dataNascimento });
+    PrimeiroAcesso(data) {
+        return this.CriarRequisicao("POST", "/usuario/criarAcesso", { Cpf: data.cpf, DataNascimento: data.dataNascimento });
     }
 
 }
