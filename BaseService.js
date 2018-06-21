@@ -1,12 +1,14 @@
 import axios from "axios";
 
-var config = require("../../src/config.json");
-
 export default class BaseService {
-    CriarRequisicao(tipo, url, data) {
+    constructor(config) {
+        this.config = config;
+    }
+
+    CriarRequisicao(tipo, url, data = null) {
         return axios({
             method: tipo,
-            url: config.apiUrl + url,
+            url: this.config.apiUrl + url,
             data: data,
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("token")

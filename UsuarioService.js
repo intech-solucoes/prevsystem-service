@@ -1,8 +1,8 @@
 import BaseService from "./BaseService";
 
-class UsuarioService extends BaseService {
+export default class UsuarioService extends BaseService {
     VerificarLogin() {
-        return this.CriarRequisicao("GET", "/usuario", null);
+        return this.CriarRequisicao("GET", "/usuario");
     }
 
     Login(cpf, senha) {
@@ -14,5 +14,3 @@ class UsuarioService extends BaseService {
     }
 
 }
-
-export default new UsuarioService();

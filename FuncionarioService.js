@@ -1,9 +1,7 @@
 import BaseService from "./BaseService";
 
-class FuncionarioService extends BaseService {
+export default class FuncionarioService extends BaseService {
     BuscarDados() {
-        return this.CriarRequisicao("GET", "/funcionario", null);
+        return this.CriarRequisicao("GET", "/funcionario");
     }
 }
-
-export default new FuncionarioService();

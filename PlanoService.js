@@ -1,10 +1,14 @@
 import BaseService from "./BaseService";
 
-class PlanoService extends BaseService {
+export default class PlanoService extends BaseService {
+    Listar() {
+        return this.CriarRequisicao("GET", "/plano");
+    }
+
     Buscar() {
         var fundacao = localStorage.getItem("fundacao");
         var empresa = localStorage.getItem("empresa");
-        return this.CriarRequisicao("GET", `/plano/porFundacaoEmpresa/${fundacao}/${empresa}`, null);
+        return this.CriarRequisicao("GET", `/plano/porFundacaoEmpresa/${fundacao}/${empresa}`);
     }
 
     BuscarPorFundacaoEmpresaPlano(plano) {
@@ -21,5 +25,3 @@ class PlanoService extends BaseService {
     }
 
 }
-
-export default new PlanoService();
