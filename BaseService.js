@@ -15,4 +15,16 @@ export default class BaseService {
             }
         })
     }
+
+    CriarRequisicaoBlob(tipo, url, data = null) {
+        return axios({
+            method: tipo,
+            url: this.config.apiUrl + url,
+            data: data,
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            },
+            responseType: 'blob'
+        })
+    }
 }

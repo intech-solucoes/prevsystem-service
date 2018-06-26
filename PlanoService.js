@@ -14,14 +14,14 @@ export default class PlanoService extends BaseService {
     BuscarPorFundacaoEmpresaPlano(plano) {
         var fundacao = localStorage.getItem("fundacao");
         var empresa = localStorage.getItem("empresa");
-        return this.CriarRequisicao("GET", `/plano/porFundacaoEmpresaPlano/${fundacao}/${empresa}/${plano}`, null)
+        return this.CriarRequisicao("GET", `/plano/porFundacaoEmpresaPlano/${fundacao}/${empresa}/${plano}`)
     }
 
-    BuscarPorFundacaoEmpresaPlanoReferencia(dados) {
+    RelatorioExtratoPorFundacaoEmpresaPlanoReferencia(dados) {
         var fundacao = localStorage.getItem("fundacao");
         var empresa = localStorage.getItem("empresa");
 
-        return this.CriarRequisicao("GET", `/plano/relatorioExtratoPorFundacaoEmpresaPlanoReferencia/${fundacao}/${empresa}/${dados.plano}/${dados.dataInicio}/${dados.dataFim}`, null);
+        return this.CriarRequisicaoBlob("GET", `/plano/relatorioExtratoPorFundacaoEmpresaPlanoReferencia/${fundacao}/${empresa}/${dados.plano}/${dados.dataInicio}/${dados.dataFim}`);
     }
 
 }
