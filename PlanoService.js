@@ -17,11 +17,12 @@ export default class PlanoService extends BaseService {
         return this.CriarRequisicao("GET", `/plano/porFundacaoEmpresaPlano/${fundacao}/${empresa}/${plano}`)
     }
 
-    RelatorioExtratoPorFundacaoEmpresaPlanoReferencia(dados) {
-        var fundacao = localStorage.getItem("fundacao");
-        var empresa = localStorage.getItem("empresa");
+    RelatorioExtratoPorPlanoReferencia(plano, dataInicio, dataFim) {
+        return this.CriarRequisicaoBlob("GET", `/plano/relatorioExtratoPorPlanoReferencia/${plano}/${dataInicio}/${dataFim}`);
+    }
 
-        return this.CriarRequisicaoBlob("GET", `/plano/relatorioExtratoPorFundacaoEmpresaPlanoReferencia/${fundacao}/${empresa}/${dados.plano}/${dados.dataInicio}/${dados.dataFim}`);
+    RelatorioCertificado(plano) {
+        return this.CriarRequisicaoBlob("GET", `/plano/certificado/${plano}`);
     }
 
 }

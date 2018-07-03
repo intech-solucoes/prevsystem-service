@@ -18,47 +18,37 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PlanoService = function (_BaseService) {
-    _inherits(PlanoService, _BaseService);
+var ContrachequeService = function (_BaseService) {
+    _inherits(ContrachequeService, _BaseService);
 
-    function PlanoService() {
-        _classCallCheck(this, PlanoService);
+    function ContrachequeService() {
+        _classCallCheck(this, ContrachequeService);
 
-        return _possibleConstructorReturn(this, (PlanoService.__proto__ || Object.getPrototypeOf(PlanoService)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (ContrachequeService.__proto__ || Object.getPrototypeOf(ContrachequeService)).apply(this, arguments));
     }
 
-    _createClass(PlanoService, [{
-        key: "Listar",
-        value: function Listar() {
-            return this.CriarRequisicao("GET", "/plano");
+    _createClass(ContrachequeService, [{
+        key: "BuscarDatas",
+        value: function BuscarDatas(cdPlano) {
+            return this.CriarRequisicao("GET", "/fichaFinanceiraAssistido/datasPorPlano/" + cdPlano);
         }
     }, {
-        key: "Buscar",
-        value: function Buscar() {
-            var fundacao = localStorage.getItem("fundacao");
-            var empresa = localStorage.getItem("empresa");
-            return this.CriarRequisicao("GET", "/plano/porFundacaoEmpresa/" + fundacao + "/" + empresa);
+        key: "BuscarPorPlanoReferenciaTipoFolha",
+        value: function BuscarPorPlanoReferenciaTipoFolha(cdPlano, referencia) {
+            var tipoFolha = "1";
+            var dataReferencia = referencia.replace(new RegExp('/', 'g'), '.');
+            return this.CriarRequisicao("GET", "/fichaFinanceiraAssistido/porPlanoReferenciaTipoFolha/" + cdPlano + "/" + dataReferencia + "/" + tipoFolha);
         }
     }, {
-        key: "BuscarPorFundacaoEmpresaPlano",
-        value: function BuscarPorFundacaoEmpresaPlano(plano) {
-            var fundacao = localStorage.getItem("fundacao");
-            var empresa = localStorage.getItem("empresa");
-            return this.CriarRequisicao("GET", "/plano/porFundacaoEmpresaPlano/" + fundacao + "/" + empresa + "/" + plano);
-        }
-    }, {
-        key: "RelatorioExtratoPorPlanoReferencia",
-        value: function RelatorioExtratoPorPlanoReferencia(plano, dataInicio, dataFim) {
-            return this.CriarRequisicaoBlob("GET", "/plano/relatorioExtratoPorPlanoReferencia/" + plano + "/" + dataInicio + "/" + dataFim);
-        }
-    }, {
-        key: "RelatorioCertificado",
-        value: function RelatorioCertificado(plano) {
-            return this.CriarRequisicaoBlob("GET", "/plano/certificado/" + plano);
+        key: "Relatorio",
+        value: function Relatorio(cdPlano, referencia) {
+            var tipoFolha = "1";
+            var dataReferencia = referencia.replace(new RegExp('/', 'g'), '.');
+            return this.CriarRequisicaoBlob("GET", "/fichaFinanceiraAssistido/relatorio/" + cdPlano + "/" + dataReferencia + "/" + tipoFolha);
         }
     }]);
 
-    return PlanoService;
+    return ContrachequeService;
 }(_BaseService3.default);
 
-exports.default = PlanoService;
+exports.default = ContrachequeService;
