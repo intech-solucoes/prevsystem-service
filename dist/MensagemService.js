@@ -28,9 +28,16 @@ var MensagemService = function (_BaseService) {
     }
 
     _createClass(MensagemService, [{
-        key: "BuscarMensagem",
-        value: function BuscarMensagem() {
-            return this.CriarRequisicao("GET", "/mensagem", null);
+        key: "BuscarTodas",
+        value: function BuscarTodas() {
+            return this.CriarRequisicao("GET", "/mensagem");
+        }
+    }, {
+        key: "BuscarPorFundacaoEmpresaPlano",
+        value: function BuscarPorFundacaoEmpresaPlano(plano) {
+            var fundacao = localStorage.getItem("fundacao");
+            var empresa = localStorage.getItem("empresa");
+            return this.CriarRequisicao("GET", "/mensagem/porFundacaoEmpresaPlano/" + fundacao + "/" + empresa + "/" + plano);
         }
     }, {
         key: "EnviarMensagem",

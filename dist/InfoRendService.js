@@ -18,47 +18,33 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PlanoService = function (_BaseService) {
-    _inherits(PlanoService, _BaseService);
+var InfoRendService = function (_BaseService) {
+    _inherits(InfoRendService, _BaseService);
 
-    function PlanoService() {
-        _classCallCheck(this, PlanoService);
+    function InfoRendService() {
+        _classCallCheck(this, InfoRendService);
 
-        return _possibleConstructorReturn(this, (PlanoService.__proto__ || Object.getPrototypeOf(PlanoService)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (InfoRendService.__proto__ || Object.getPrototypeOf(InfoRendService)).apply(this, arguments));
     }
 
-    _createClass(PlanoService, [{
-        key: "Listar",
-        value: function Listar() {
-            return this.CriarRequisicao("GET", "/plano");
+    _createClass(InfoRendService, [{
+        key: "BuscarReferencias",
+        value: function BuscarReferencias() {
+            return this.CriarRequisicao("GET", "/infoRend/referencias");
         }
     }, {
-        key: "Buscar",
-        value: function Buscar() {
-            var fundacao = localStorage.getItem("fundacao");
-            var empresa = localStorage.getItem("empresa");
-            return this.CriarRequisicao("GET", "/plano/porFundacaoEmpresa/" + fundacao + "/" + empresa);
+        key: "BuscarPorReferencia",
+        value: function BuscarPorReferencia(referencia) {
+            return this.CriarRequisicao("GET", "/infoRend/porReferencia/" + referencia);
         }
     }, {
-        key: "BuscarPorFundacaoEmpresaPlano",
-        value: function BuscarPorFundacaoEmpresaPlano(plano) {
-            var fundacao = localStorage.getItem("fundacao");
-            var empresa = localStorage.getItem("empresa");
-            return this.CriarRequisicao("GET", "/plano/porFundacaoEmpresaPlano/" + fundacao + "/" + empresa + "/" + plano);
-        }
-    }, {
-        key: "RelatorioExtratoPorPlanoReferencia",
-        value: function RelatorioExtratoPorPlanoReferencia(plano, dataInicio, dataFim) {
-            return this.CriarRequisicaoBlob("GET", "/plano/relatorioExtratoPorPlanoReferencia/" + plano + "/" + dataInicio + "/" + dataFim);
-        }
-    }, {
-        key: "RelatorioCertificado",
-        value: function RelatorioCertificado(plano) {
-            return this.CriarRequisicaoBlob("GET", "/plano/certificado/" + plano);
+        key: "Relatorio",
+        value: function Relatorio(referencia) {
+            return this.CriarRequisicaoBlob("GET", "/infoRend/relatorio/" + referencia);
         }
     }]);
 
-    return PlanoService;
+    return InfoRendService;
 }(_BaseService3.default);
 
-exports.default = PlanoService;
+exports.default = InfoRendService;
