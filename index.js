@@ -5,6 +5,8 @@ import DocumentoService from "./DocumentoService";
 import MensagemService from "./MensagemService";
 import ContrachequeService from "./ContrachequeService"
 import InfoRendService from "./InfoRendService";
+import RecadastramentoService from "./RecadastramentoService";
+import DependenteService from "./DependenteService";
 
 export {
     UsuarioService,
@@ -13,5 +15,7 @@ export {
     DocumentoService,
     MensagemService,
     ContrachequeService,
-    InfoRendService
+    InfoRendService,
+    RecadastramentoService,
+    DependenteService
 };
