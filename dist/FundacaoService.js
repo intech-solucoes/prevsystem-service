@@ -18,35 +18,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var MensagemService = function (_BaseService) {
-    _inherits(MensagemService, _BaseService);
+var FundacaoService = function (_BaseService) {
+    _inherits(FundacaoService, _BaseService);
 
-    function MensagemService() {
-        _classCallCheck(this, MensagemService);
+    function FundacaoService() {
+        _classCallCheck(this, FundacaoService);
 
-        return _possibleConstructorReturn(this, (MensagemService.__proto__ || Object.getPrototypeOf(MensagemService)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (FundacaoService.__proto__ || Object.getPrototypeOf(FundacaoService)).apply(this, arguments));
     }
 
-    _createClass(MensagemService, [{
-        key: "BuscarTodas",
-        value: function BuscarTodas() {
-            return this.CriarRequisicao("GET", "/mensagem");
-        }
-    }, {
-        key: "BuscarPorFundacaoEmpresaPlano",
-        value: function BuscarPorFundacaoEmpresaPlano(plano) {
-            var fundacao = localStorage.getItem("fundacao");
-            var empresa = localStorage.getItem("empresa");
-            return this.CriarRequisicao("GET", "/mensagem/porFundacaoEmpresaPlano/" + fundacao + "/" + empresa + "/" + plano);
-        }
-    }, {
-        key: "EnviarMensagem",
-        value: function EnviarMensagem(data) {
-            return this.CriarRequisicao("POST", "/mensagem", data);
+    _createClass(FundacaoService, [{
+        key: "BuscarPorCdFundacao",
+        value: function BuscarPorCdFundacao(cdFundacao) {
+            return this.CriarRequisicao("GET", "/fundacao/" + cdFundacao);
         }
     }]);
 
-    return MensagemService;
+    return FundacaoService;
 }(_BaseService3.default);
 
-exports.default = MensagemService;
+exports.default = FundacaoService;
