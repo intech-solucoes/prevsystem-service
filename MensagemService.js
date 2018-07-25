@@ -12,7 +12,7 @@ export default class MensagemService extends BaseService {
     }
 
     EnviarMensagem(data) {
-        return this.CriarRequisicao("POST", "/mensagem/enviar", data);
+        return this.CriarRequisicao("POST", "/mensagem", data);
     }
 
 }
