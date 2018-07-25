@@ -7,6 +7,9 @@ import ContrachequeService from "./ContrachequeService"
 import InfoRendService from "./InfoRendService";
 import RecadastramentoService from "./RecadastramentoService";
 import DependenteService from "./DependenteService";
+import EmpresaService from "./EmpresaService";
+import SituacaoPlanoService from "./SituacaoPlanoService";
+import FundacaoService from "./FundacaoService";
 
 export {
     UsuarioService,
@@ -17,5 +20,8 @@ export {
     ContrachequeService,
     InfoRendService,
     RecadastramentoService,
-    DependenteService
+    DependenteService,
+    EmpresaService,
+    SituacaoPlanoService,
+    FundacaoService,
 };
