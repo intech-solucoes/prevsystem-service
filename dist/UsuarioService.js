@@ -39,8 +39,8 @@ var UsuarioService = function (_BaseService) {
         }
     }, {
         key: "PrimeiroAcesso",
-        value: function PrimeiroAcesso(data) {
-            return this.CriarRequisicao("POST", "/usuario/criarAcesso", { Cpf: data.cpf, DataNascimento: data.dataNascimento });
+        value: function PrimeiroAcesso(cpf, dataNascimento) {
+            return this.CriarRequisicao("POST", "/usuario/criarAcesso", { Cpf: cpf, DataNascimento: dataNascimento });
         }
     }]);
 
