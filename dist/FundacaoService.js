@@ -18,33 +18,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var UsuarioService = function (_BaseService) {
-    _inherits(UsuarioService, _BaseService);
+var FundacaoService = function (_BaseService) {
+    _inherits(FundacaoService, _BaseService);
 
-    function UsuarioService() {
-        _classCallCheck(this, UsuarioService);
+    function FundacaoService() {
+        _classCallCheck(this, FundacaoService);
 
-        return _possibleConstructorReturn(this, (UsuarioService.__proto__ || Object.getPrototypeOf(UsuarioService)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (FundacaoService.__proto__ || Object.getPrototypeOf(FundacaoService)).apply(this, arguments));
     }
 
-    _createClass(UsuarioService, [{
-        key: "VerificarLogin",
-        value: function VerificarLogin() {
-            return this.CriarRequisicao("GET", "/usuario");
-        }
-    }, {
-        key: "Login",
-        value: function Login(cpf, senha) {
-            return this.CriarRequisicao("POST", "/usuario/login", { Cpf: cpf, Senha: senha });
-        }
-    }, {
-        key: "PrimeiroAcesso",
-        value: function PrimeiroAcesso(cpf, dataNascimento) {
-            return this.CriarRequisicao("POST", "/usuario/criarAcesso", { Cpf: cpf, DataNascimento: dataNascimento });
+    _createClass(FundacaoService, [{
+        key: "BuscarPorCdFundacao",
+        value: function BuscarPorCdFundacao(cdFundacao) {
+            return this.CriarRequisicao("GET", "/fundacao/" + cdFundacao);
         }
     }]);
 
-    return UsuarioService;
+    return FundacaoService;
 }(_BaseService3.default);
 
-exports.default = UsuarioService;
+exports.default = FundacaoService;

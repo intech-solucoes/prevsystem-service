@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _BaseService2 = require("./BaseService");
+var _BaseService2 = require('./BaseService');
 
 var _BaseService3 = _interopRequireDefault(_BaseService2);
 
@@ -18,33 +18,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var UsuarioService = function (_BaseService) {
-    _inherits(UsuarioService, _BaseService);
+var SituacaoPlanoService = function (_BaseService) {
+    _inherits(SituacaoPlanoService, _BaseService);
 
-    function UsuarioService() {
-        _classCallCheck(this, UsuarioService);
+    function SituacaoPlanoService() {
+        _classCallCheck(this, SituacaoPlanoService);
 
-        return _possibleConstructorReturn(this, (UsuarioService.__proto__ || Object.getPrototypeOf(UsuarioService)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (SituacaoPlanoService.__proto__ || Object.getPrototypeOf(SituacaoPlanoService)).apply(this, arguments));
     }
 
-    _createClass(UsuarioService, [{
-        key: "VerificarLogin",
-        value: function VerificarLogin() {
-            return this.CriarRequisicao("GET", "/usuario");
-        }
-    }, {
-        key: "Login",
-        value: function Login(cpf, senha) {
-            return this.CriarRequisicao("POST", "/usuario/login", { Cpf: cpf, Senha: senha });
-        }
-    }, {
-        key: "PrimeiroAcesso",
-        value: function PrimeiroAcesso(cpf, dataNascimento) {
-            return this.CriarRequisicao("POST", "/usuario/criarAcesso", { Cpf: cpf, DataNascimento: dataNascimento });
+    _createClass(SituacaoPlanoService, [{
+        key: 'BuscarTodas',
+        value: function BuscarTodas() {
+            return this.CriarRequisicao("GET", '/sitPlano');
         }
     }]);
 
-    return UsuarioService;
+    return SituacaoPlanoService;
 }(_BaseService3.default);
 
-exports.default = UsuarioService;
+exports.default = SituacaoPlanoService;

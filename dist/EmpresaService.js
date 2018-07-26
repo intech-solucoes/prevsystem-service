@@ -18,33 +18,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var UsuarioService = function (_BaseService) {
-    _inherits(UsuarioService, _BaseService);
+var EmpresaService = function (_BaseService) {
+    _inherits(EmpresaService, _BaseService);
 
-    function UsuarioService() {
-        _classCallCheck(this, UsuarioService);
+    function EmpresaService() {
+        _classCallCheck(this, EmpresaService);
 
-        return _possibleConstructorReturn(this, (UsuarioService.__proto__ || Object.getPrototypeOf(UsuarioService)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (EmpresaService.__proto__ || Object.getPrototypeOf(EmpresaService)).apply(this, arguments));
     }
 
-    _createClass(UsuarioService, [{
-        key: "VerificarLogin",
-        value: function VerificarLogin() {
-            return this.CriarRequisicao("GET", "/usuario");
-        }
-    }, {
-        key: "Login",
-        value: function Login(cpf, senha) {
-            return this.CriarRequisicao("POST", "/usuario/login", { Cpf: cpf, Senha: senha });
-        }
-    }, {
-        key: "PrimeiroAcesso",
-        value: function PrimeiroAcesso(cpf, dataNascimento) {
-            return this.CriarRequisicao("POST", "/usuario/criarAcesso", { Cpf: cpf, DataNascimento: dataNascimento });
+    _createClass(EmpresaService, [{
+        key: "BuscarTodas",
+        value: function BuscarTodas() {
+            return this.CriarRequisicao("GET", "/empresa");
         }
     }]);
 
-    return UsuarioService;
+    return EmpresaService;
 }(_BaseService3.default);
 
-exports.default = UsuarioService;
+exports.default = EmpresaService;

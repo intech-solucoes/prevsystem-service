@@ -42,7 +42,7 @@ var MensagemService = function (_BaseService) {
     }, {
         key: "EnviarMensagem",
         value: function EnviarMensagem(data) {
-            return this.CriarRequisicao("POST", "/mensagem/enviar", data);
+            return this.CriarRequisicao("POST", "/mensagem", data);
         }
     }]);
 
