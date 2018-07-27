@@ -42,6 +42,11 @@ var UsuarioService = function (_BaseService) {
         value: function PrimeiroAcesso(cpf, dataNascimento) {
             return this.CriarRequisicao("POST", "/usuario/criarAcesso", { Cpf: cpf, DataNascimento: dataNascimento });
         }
+    }, {
+        key: "TrocarSenha",
+        value: function TrocarSenha(senhaAntiga, senhaNova) {
+            return this.CriarRequisicao("POST", "/usuario/alterarSenha", { senhaAntiga: senhaAntiga, senhaNova: senhaNova });
+        }
     }]);
 
     return UsuarioService;

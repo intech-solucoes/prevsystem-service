@@ -13,4 +13,8 @@ export default class UsuarioService extends BaseService {
         return this.CriarRequisicao("POST", "/usuario/criarAcesso", { Cpf: cpf, DataNascimento: dataNascimento });
     }
 
+    TrocarSenha(senhaAntiga, senhaNova) {
+        return this.CriarRequisicao("POST", "/usuario/alterarSenha", { senhaAntiga: senhaAntiga, senhaNova: senhaNova });
+    }
+
 }
