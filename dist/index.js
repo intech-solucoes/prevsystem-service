@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.FundacaoService = exports.SituacaoPlanoService = exports.EmpresaService = exports.DependenteService = exports.RecadastramentoService = exports.InfoRendService = exports.ContrachequeService = exports.MensagemService = exports.DocumentoService = exports.PlanoService = exports.FuncionarioService = exports.UsuarioService = undefined;
+exports.ListasService = exports.FundacaoService = exports.SituacaoPlanoService = exports.EmpresaService = exports.DependenteService = exports.RecadastramentoService = exports.InfoRendService = exports.ContrachequeService = exports.MensagemService = exports.DocumentoService = exports.PlanoService = exports.FuncionarioService = exports.UsuarioService = undefined;
 
 var _UsuarioService = require("./UsuarioService");
 
@@ -53,6 +53,10 @@ var _FundacaoService = require("./FundacaoService");
 
 var _FundacaoService2 = _interopRequireDefault(_FundacaoService);
 
+var _ListasService = require("./ListasService");
+
+var _ListasService2 = _interopRequireDefault(_ListasService);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.UsuarioService = _UsuarioService2.default;
@@ -67,3 +71,4 @@ exports.DependenteService = _DependenteService2.default;
 exports.EmpresaService = _EmpresaService2.default;
 exports.SituacaoPlanoService = _SituacaoPlanoService2.default;
 exports.FundacaoService = _FundacaoService2.default;
+exports.ListasService = _ListasService2.default;

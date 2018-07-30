@@ -10,6 +10,7 @@ import DependenteService from "./DependenteService";
 import EmpresaService from "./EmpresaService";
 import SituacaoPlanoService from "./SituacaoPlanoService";
 import FundacaoService from "./FundacaoService";
+import ListasService from "./ListasService";
 
 export {
     UsuarioService,
@@ -24,4 +25,5 @@ export {
     EmpresaService,
     SituacaoPlanoService,
     FundacaoService,
+    ListasService
 };
