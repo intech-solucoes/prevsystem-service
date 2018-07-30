@@ -56,6 +56,11 @@ var PlanoService = function (_BaseService) {
         value: function RelatorioCertificado(plano) {
             return this.CriarRequisicaoBlob("GET", "/plano/certificado/" + plano);
         }
+    }, {
+        key: "BuscarPorEmpresa",
+        value: function BuscarPorEmpresa(empresa) {
+            return this.CriarRequisicao("GET", "/plano/porEmpresa/" + empresa);
+        }
     }]);
 
     return PlanoService;

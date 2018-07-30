@@ -25,4 +25,8 @@ export default class PlanoService extends BaseService {
         return this.CriarRequisicaoBlob("GET", `/plano/certificado/${plano}`);
     }
 
+    BuscarPorEmpresa(empresa) {
+        return this.CriarRequisicao("GET", `/plano/porEmpresa/${empresa}`);
+    }
+
 }
