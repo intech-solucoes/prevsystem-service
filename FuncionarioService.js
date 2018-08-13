@@ -1,7 +1,7 @@
-import BaseService from "./BaseService";
+import { BaseService } from "@intechprev/react-lib";
 
 export default class FuncionarioService extends BaseService {
-    BuscarDados() {
+    Buscar() {
         return this.CriarRequisicao("GET", "/funcionario");
     }
 }

@@ -1,4 +1,4 @@
-import BaseService from './BaseService';
+import { BaseService } from "@intechprev/react-lib";
 
 export default class ContrachequeService extends BaseService {
     BuscarDatas(cdPlano) {
@@ -7,13 +7,11 @@ export default class ContrachequeService extends BaseService {
     
     BuscarPorPlanoReferenciaTipoFolha(cdPlano, referencia) {
         var tipoFolha = "1";
-        var dataReferencia = referencia.replace(new RegExp('/', 'g'), '.');
-        return this.CriarRequisicao("GET", `/fichaFinanceiraAssistido/porPlanoReferenciaTipoFolha/${cdPlano}/${dataReferencia}/${tipoFolha}`);
+        return this.CriarRequisicao("GET", `/fichaFinanceiraAssistido/porPlanoReferenciaTipoFolha/${cdPlano}/${this.FormatarData(referencia)}/${tipoFolha}`);
     }
 
     Relatorio(cdPlano, referencia) {
         var tipoFolha = "1";
-        var dataReferencia = referencia.replace(new RegExp('/', 'g'), '.');
-        return this.CriarRequisicaoBlob("GET", `/fichaFinanceiraAssistido/relatorio/${cdPlano}/${dataReferencia}/${tipoFolha}`);
+        return this.CriarRequisicaoBlob("GET", `/fichaFinanceiraAssistido/relatorio/${cdPlano}/${this.FormatarData(referencia)}/${tipoFolha}`);
     }
 }
