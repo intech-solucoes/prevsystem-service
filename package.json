@@ -1,19 +1,21 @@
 {
-  "name": "prevsystem-service",
-  "version": "1.0.0",
-  "module": "dist/index.js",
-  "repository": "https://github.com/intech-solucoes/prevsystem-service.git",
-  "author": "Rony Moura <ronymmoura@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json"
-  },
-  "dependencies": {
-    "axios": "^0.18.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "rimraf": "^2.6.2"
-  }
+	"name": "@intechprev/prevsystem-service",
+	"version": "0.0.3",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/intech-solucoes/prevsystem-service.git"
+	},
+	"author": "Rony Moura <ronymmoura@gmail.com>",
+	"license": "MIT",
+	"description": "",
+	"bugs": {
+		"url": "https://github.com/intech-solucoes/prevsystem-service/issues"
+	},
+	"homepage": "https://github.com/intech-solucoes/prevsystem-service#readme",
+	"dependencies": {},
+	"devDependencies": {},
+	"scripts": {
+		"publish:npm": "npm publish --access public"
+	}
 }

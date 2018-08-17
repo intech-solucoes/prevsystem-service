@@ -1,4 +1,4 @@
-import BaseService from "./BaseService";
+import { BaseService } from "@intechprev/react-lib";
 
 export default class UsuarioService extends BaseService {
     VerificarLogin() {

@@ -1,20 +1,16 @@
-import BaseService from "./BaseService";
+import { BaseService } from "@intechprev/react-lib";
 
 export default class PlanoService extends BaseService {
-    Listar() {
-        return this.CriarRequisicao("GET", "/plano");
+    BuscarTodos() {
+        return this.CriarRequisicao("GET", "/plano/todos");
     }
 
     Buscar() {
-        var fundacao = localStorage.getItem("fundacao");
-        var empresa = localStorage.getItem("empresa");
-        return this.CriarRequisicao("GET", `/plano/porFundacaoEmpresa/${fundacao}/${empresa}`);
+        return this.CriarRequisicao("GET", `/plano`);
     }
 
-    BuscarPorFundacaoEmpresaPlano(plano) {
-        var fundacao = localStorage.getItem("fundacao");
-        var empresa = localStorage.getItem("empresa");
-        return this.CriarRequisicao("GET", `/plano/porFundacaoEmpresaPlano/${fundacao}/${empresa}/${plano}`)
+    BuscarPorCodigo(plano) {
+        return this.CriarRequisicao("GET", `/plano/porCodigo/${plano}`)
     }
 
     RelatorioExtratoPorPlanoReferencia(plano, dataInicio, dataFim) {

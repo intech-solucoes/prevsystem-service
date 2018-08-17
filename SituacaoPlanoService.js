@@ -1,4 +1,4 @@
-import BaseService from './BaseService';
+import { BaseService } from "@intechprev/react-lib";
 
 class SituacaoPlanoService extends BaseService {
 

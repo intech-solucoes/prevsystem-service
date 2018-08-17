@@ -11,6 +11,13 @@ import EmpresaService from "./EmpresaService";
 import SituacaoPlanoService from "./SituacaoPlanoService";
 import FundacaoService from "./FundacaoService";
 import ListasService from "./ListasService";
+import DadosPessoaisService from "./DadosPessoaisService";
+import ProcessoBeneficioService from "./ProcessoBeneficioService";
+import FichaFinanceiraService from "./FichaFinanceiraService";
+import FichaFinanceiraAssistidoService from "./FichaFinanceiraAssistidoService";
+import ContratoService from "./ContratoService";
+import RelacionamentoService from "./RelacionamentoService";
+import HistSaldoService from "./HistSaldoService";
 
 export {
     UsuarioService,
@@ -26,4 +33,11 @@ export {
     SituacaoPlanoService,
     FundacaoService,
     ListasService
+    DadosPessoaisService,
+    ProcessoBeneficioService,
+    FichaFinanceiraService,
+    FichaFinanceiraAssistidoService,
+    ContratoService,
+    RelacionamentoService,
+    HistSaldoService
 };
