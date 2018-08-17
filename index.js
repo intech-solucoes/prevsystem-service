@@ -32,7 +32,7 @@ export {
     EmpresaService,
     SituacaoPlanoService,
     FundacaoService,
-    ListasService
+    ListasService,
     DadosPessoaisService,
     ProcessoBeneficioService,
     FichaFinanceiraService,
