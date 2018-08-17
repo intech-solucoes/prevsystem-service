@@ -10,6 +10,7 @@ import DependenteService from "./DependenteService";
 import EmpresaService from "./EmpresaService";
 import SituacaoPlanoService from "./SituacaoPlanoService";
 import FundacaoService from "./FundacaoService";
+import ListasService from "./ListasService";
 import DadosPessoaisService from "./DadosPessoaisService";
 import ProcessoBeneficioService from "./ProcessoBeneficioService";
 import FichaFinanceiraService from "./FichaFinanceiraService";
@@ -31,6 +32,7 @@ export {
     EmpresaService,
     SituacaoPlanoService,
     FundacaoService,
+    ListasService
     DadosPessoaisService,
     ProcessoBeneficioService,
     FichaFinanceiraService,
