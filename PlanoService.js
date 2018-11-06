@@ -1,6 +1,6 @@
 import { BaseService } from "@intechprev/react-lib";
 
-export default class PlanoService extends BaseService {
+class PlanoService extends BaseService {
     BuscarTodos() {
         return this.CriarRequisicao("GET", "/plano/todos");
     }
@@ -26,3 +26,5 @@ export default class PlanoService extends BaseService {
     }
 
 }
+
+export default new PlanoService();

@@ -7,4 +7,4 @@ class FundacaoService extends BaseService {
     }
 }
 
-export default FundacaoService;
+export default new FundacaoService();

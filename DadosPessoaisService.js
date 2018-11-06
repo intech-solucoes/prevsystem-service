@@ -1,7 +1,9 @@
 import { BaseService } from "@intechprev/react-lib";
 
-export default class DadosPessoaisService extends BaseService {
+class DadosPessoaisService extends BaseService {
     Buscar() {
         return this.CriarRequisicao("GET", `/dadosPessoais`);
     }
 }
+
+export default new DadosPessoaisService();

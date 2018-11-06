@@ -1,6 +1,6 @@
 import { BaseService } from "@intechprev/react-lib";
 
-export default class DadosPessoaisService extends BaseService {
+class DadosPessoaisService extends BaseService {
     SabesprevBuscarAtivosPorPlano(cdPlano) {
         return this.CriarRequisicao("GET", `/contrato/sabesprevAtivosPorPlano/${cdPlano}`);
     }
@@ -9,3 +9,5 @@ export default class DadosPessoaisService extends BaseService {
         return this.CriarRequisicao("GET", `/contrato/sabesprevPorAnoNum/${ano}/${num}`);
     }
 }
+
+export default new DadosPessoaisService();

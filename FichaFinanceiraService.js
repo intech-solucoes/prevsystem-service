@@ -1,6 +1,6 @@
 import { BaseService } from "@intechprev/react-lib";
 
-export default class FichaFinanceiraService extends BaseService {
+class FichaFinanceiraService extends BaseService {
     BuscarUltimaPorPlano(cdPlano) {
         return this.CriarRequisicao("GET", `/fichaFinanceira/ultimaPorPlano/${cdPlano}`);
     }
@@ -21,3 +21,5 @@ export default class FichaFinanceiraService extends BaseService {
         return this.CriarRequisicao("GET", `/fichaFinanceira/sabesprevSaldoPorPlano/${cdPlano}`);
     }
 }
+
+export default new FichaFinanceiraService();

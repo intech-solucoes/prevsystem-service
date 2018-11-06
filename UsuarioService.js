@@ -1,12 +1,16 @@
 import { BaseService } from "@intechprev/react-lib";
 
-export default class UsuarioService extends BaseService {
+class UsuarioService extends BaseService {
     VerificarLogin() {
         return this.CriarRequisicao("GET", "/usuario");
     }
 
     Login(cpf, senha) {
         return this.CriarRequisicao("POST", "/usuario/login", { Cpf: cpf, Senha: senha });
+    }
+
+    LoginSemSenha(cpf) {
+        return this.CriarRequisicao("POST", "/usuario/login", { Cpf: cpf });
     }
 
     PrimeiroAcesso(cpf, dataNascimento) {
@@ -18,3 +22,5 @@ export default class UsuarioService extends BaseService {
     }
 
 }
+
+export default new UsuarioService();

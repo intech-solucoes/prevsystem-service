@@ -1,6 +1,6 @@
 import { BaseService } from "@intechprev/react-lib";
 
-export default class MensagemService extends BaseService {
+class MensagemService extends BaseService {
     BuscarTodas() {
         return this.CriarRequisicao("GET", "/mensagem");
     }
@@ -16,3 +16,5 @@ export default class MensagemService extends BaseService {
     }
 
 }
+
+export default new MensagemService();

@@ -7,4 +7,4 @@ class SituacaoPlanoService extends BaseService {
     }
 }
 
-export default SituacaoPlanoService;
+export default new SituacaoPlanoService();

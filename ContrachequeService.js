@@ -1,6 +1,6 @@
 import { BaseService } from "@intechprev/react-lib";
 
-export default class ContrachequeService extends BaseService {
+class ContrachequeService extends BaseService {
     BuscarDatas(cdPlano) {
         return this.CriarRequisicao("GET", `/fichaFinanceiraAssistido/datasPorPlano/${cdPlano}`);
     }
@@ -15,3 +15,5 @@ export default class ContrachequeService extends BaseService {
         return this.CriarRequisicaoBlob("GET", `/fichaFinanceiraAssistido/relatorio/${cdPlano}/${this.FormatarData(referencia)}/${tipoFolha}`);
     }
 }
+
+export default new ContrachequeService();

@@ -1,6 +1,6 @@
 import { BaseService } from "@intechprev/react-lib";
 
-export default class InfoRendService extends BaseService {
+class InfoRendService extends BaseService {
     BuscarReferencias() {
         return this.CriarRequisicao("GET", `/infoRend/referencias`);
     }
@@ -13,3 +13,5 @@ export default class InfoRendService extends BaseService {
         return this.CriarRequisicaoBlob("GET", `/infoRend/relatorio/${referencia}`)
     }
 }
+
+export default new InfoRendService();

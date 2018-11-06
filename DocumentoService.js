@@ -1,23 +1,31 @@
 import { BaseService } from "@intechprev/react-lib";
 
-export default class DocumentoService extends BaseService {
+class DocumentoService extends BaseService {
     BuscarPorPasta(oidPasta = null) {
         return this.CriarRequisicao("GET", `/documento/porPasta/${oidPasta}`);
     }
 
-    Criar(OID_ARQUIVO_UPLOAD, TXT_TITULO, IND_ATIVO, NUM_ORDEM, OID_PASTA = null) {
-        var data = {
+    Criar(OID_ARQUIVO_UPLOAD, TXT_TITULO, IND_ATIVO, NUM_ORDEM, OID_DOCUMENTO_PASTA = null) {
+        return this.CriarRequisicao("POST", "/documento", {
             OID_ARQUIVO_UPLOAD,
             TXT_TITULO,
             IND_ATIVO,
             NUM_ORDEM,
-            OID_PASTA
-        };
+            OID_DOCUMENTO_PASTA
+        });
+    }
 
-        return this.CriarRequisicao("POST", "/documento", data);
+    Deletar(OID_DOCUMENTO) {
+        return this.CriarRequisicao("DELETE", `/documento/${OID_DOCUMENTO}`);
     }
 
     CriarPasta(NOM_PASTA, OID_DOCUMENTO_PASTA_PAI = null) {
         return this.CriarRequisicao("POST", "/documento/criarPasta", { NOM_PASTA, OID_DOCUMENTO_PASTA_PAI });
     }
+
+    DeletarPasta(OID_DOCUMENTO_PASTA) {
+        return this.CriarRequisicao("DELETE", `/documento/deletarPasta/${OID_DOCUMENTO_PASTA}`);
+    }
 }
+
+export default new DocumentoService();

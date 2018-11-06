@@ -7,4 +7,4 @@ class EmpresaService extends BaseService {
     }
 }
 
-export default EmpresaService;
+export default new EmpresaService();

@@ -7,4 +7,4 @@ class HistSaldoService extends BaseService {
     }
 }
 
-export default HistSaldoService;
+export default new HistSaldoService();
