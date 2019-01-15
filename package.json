@@ -1,6 +1,6 @@
 {
 	"name": "@intechprev/prevsystem-service",
-	"version": "0.0.10",
+	"version": "0.0.15",
 	"main": "index.js",
 	"repository": {
 		"type": "git",
@@ -13,7 +13,9 @@
 		"url": "https://github.com/intech-solucoes/prevsystem-service/issues"
 	},
 	"homepage": "https://github.com/intech-solucoes/prevsystem-service#readme",
-	"dependencies": { },
+	"dependencies": {
+		"@intechprev/react-lib": "^0.0.5"
+	},
 	"devDependencies": {},
 	"scripts": {
 		"publish:npm": "npm publish --access public"
