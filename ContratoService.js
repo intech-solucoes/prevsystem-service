@@ -1,4 +1,4 @@
-import { BaseService } from "@intechprev/react-lib";
+import BaseService from "@intechprev/service";
 
 class DadosPessoaisService extends BaseService {
     SabesprevBuscarAtivosPorPlano(cdPlano) {
@@ -7,6 +7,14 @@ class DadosPessoaisService extends BaseService {
 
     SabesprevBuscarPorAnoNum(ano, num) {
         return this.CriarRequisicao("GET", `/contrato/sabesprevPorAnoNum/${ano}/${num}`);
+    }
+
+    ParametrosPorPlano(cdPlano) {
+        return this.CriarRequisicao("GET", `/contrato/parametrosPorPlano/${cdPlano}`);
+    }
+
+    BuscarConcessao(cdPlano, cdModal, cdNatur, dataCredito) {
+        return this.CriarRequisicao("GET", `/contrato/buscarConcessao/${cdPlano}/${cdModal}/${cdNatur}/${this.FormatarData(dataCredito)}`);
     }
 }
 

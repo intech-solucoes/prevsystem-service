@@ -1,4 +1,4 @@
-import { BaseService } from "@intechprev/react-lib";
+import BaseService from "@intechprev/service";
 
 class DocumentoService extends BaseService {
     BuscarPorPasta(oidPasta = null) {
