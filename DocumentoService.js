@@ -32,7 +32,7 @@ class DocumentoService extends BaseService {
     }
 
     Download(OID_DOCUMENTO) {
-        return this.CriarRequisicao("GET", `/documento/download/${OID_DOCUMENTO}`);
+        return this.CriarRequisicaoBlob("GET", `/documento/download/${OID_DOCUMENTO}`);
     }
 }
 
