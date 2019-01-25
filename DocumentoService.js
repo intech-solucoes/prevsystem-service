@@ -2,7 +2,7 @@ import BaseService from "@intechprev/service";
 
 class DocumentoService extends BaseService {
     BuscarPorOidDocumento(oidDocumento) {
-        return this.CriarRequisicao("GET", `/documento/${oidDocumento}`);
+        return this.CriarRequisicao("GET", `/documento/buscarPorOidDocumento/${oidDocumento}`);
     }
 
     BuscarPorPasta(oidPasta = null) {
