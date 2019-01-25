@@ -27,8 +27,8 @@ class DocumentoService extends BaseService {
         return this.CriarRequisicao("DELETE", `/documento/deletarPasta/${OID_DOCUMENTO_PASTA}`);
     }
 
-    BuscarArquivoUpload(OID_DOCUMENTO) {
-        return this.CriarRequisicao("GET", `/documento/buscarArquivoUpload/${OID_DOCUMENTO}`);
+    Download(OID_DOCUMENTO) {
+        return this.CriarRequisicao("GET", `/documento/download/${OID_DOCUMENTO}`);
     }
 }
 
