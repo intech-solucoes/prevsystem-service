@@ -1,20 +1,9 @@
 {
 	"name": "@intechprev/prevsystem-service",
-	"version": "1.0.7",
+	"version": "2.0.0",
 	"main": "index.js",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/intech-solucoes/prevsystem-service.git"
-	},
-	"author": "Rony Moura <ronymmoura@gmail.com>",
-	"license": "MIT",
-	"description": "",
-	"bugs": {
-		"url": "https://github.com/intech-solucoes/prevsystem-service/issues"
-	},
-	"homepage": "https://github.com/intech-solucoes/prevsystem-service#readme",
 	"dependencies": {
-		"@intechprev/service": "^1.0.2"
+		"@intechprev/service": "../lib/service"
 	},
 	"devDependencies": {},
 	"scripts": {

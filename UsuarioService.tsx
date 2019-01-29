@@ -1,4 +1,4 @@
-import BaseService from "@intechprev/service";
+import { BaseService, TipoRequisicao, TipoResposta } from "@intechprev/service";
 
 class UsuarioService extends BaseService {
     VerificarLogin() {

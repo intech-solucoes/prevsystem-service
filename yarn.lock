@@ -2,8 +2,8 @@
 # yarn lockfile v1
 
 
-"@intechprev/react-lib@../lib/react-lib":
-  version "0.0.3"
+"@intechprev/service@../lib/service":
+  version "2.0.0"
   dependencies:
     axios "^0.18.0"
 
