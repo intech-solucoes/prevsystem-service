@@ -20,7 +20,7 @@ class DocumentoService extends BaseService {
     }
 
     Deletar(OID_DOCUMENTO) {
-        return this.CriarRequisicao("DELETE", `/documento/${OID_DOCUMENTO}`);
+        return this.CriarRequisicao("POST", `/documento/${OID_DOCUMENTO}`);
     }
 
     CriarPasta(NOM_PASTA, OID_DOCUMENTO_PASTA_PAI = null) {
@@ -28,7 +28,7 @@ class DocumentoService extends BaseService {
     }
 
     DeletarPasta(OID_DOCUMENTO_PASTA) {
-        return this.CriarRequisicao("DELETE", `/documento/deletarPasta/${OID_DOCUMENTO_PASTA}`);
+        return this.CriarRequisicao("POST", `/documento/deletarPasta/${OID_DOCUMENTO_PASTA}`);
     }
 
     Download(OID_DOCUMENTO) {
