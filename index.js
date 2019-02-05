@@ -19,6 +19,7 @@ import ContratoService from "./ContratoService";
 import RelacionamentoService from "./RelacionamentoService";
 import HistSaldoService from "./HistSaldoService";
 import FichaFechamentoPrevesService from "./FichaFechamentoPrevesService";
+import SalarioBaseService from "./SalarioBaseService";
 
 export {
     UsuarioService,
@@ -41,5 +42,6 @@ export {
     ContratoService,
     RelacionamentoService,
     HistSaldoService,
-    FichaFechamentoPrevesService
+    FichaFechamentoPrevesService,
+    SalarioBaseService
 };
