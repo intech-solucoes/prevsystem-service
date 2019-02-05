@@ -18,6 +18,7 @@ import FichaFinanceiraAssistidoService from "./FichaFinanceiraAssistidoService";
 import ContratoService from "./ContratoService";
 import RelacionamentoService from "./RelacionamentoService";
 import HistSaldoService from "./HistSaldoService";
+import FichaFechamentoPrevesService from "./FichaFechamentoPrevesService";
 
 export {
     UsuarioService,
@@ -39,5 +40,6 @@ export {
     FichaFinanceiraAssistidoService,
     ContratoService,
     RelacionamentoService,
-    HistSaldoService
+    HistSaldoService,
+    FichaFechamentoPrevesService
 };
