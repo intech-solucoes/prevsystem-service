@@ -11,6 +11,10 @@ class MensagemService extends BaseService {
         return this.CriarRequisicao("GET", `/mensagem/porFundacaoEmpresaPlano/${fundacao}/${empresa}/${plano}`);
     }
 
+    BuscarPorPlano(plano) {
+        return this.CriarRequisicao("GET", `/mensagem/porPlano/${plano}`);
+    }
+
     EnviarMensagem(data) {
         return this.CriarRequisicao("POST", "/mensagem", data);
     }
