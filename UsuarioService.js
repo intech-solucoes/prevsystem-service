@@ -21,6 +21,14 @@ class UsuarioService extends BaseService {
         return this.CriarRequisicao("POST", "/usuario/alterarSenha", { senhaAntiga: senhaAntiga, senhaNova: senhaNova });
     }
 
+    SelecionarParticipante(cpf) {
+        return this.CriarRequisicao("POST", "/usuario/selecionar", { Cpf: cpf });
+    }
+
+    VerificarAdmin() {
+        return this.VerificarAdmin();
+    }
+
 }
 
 export default new UsuarioService();

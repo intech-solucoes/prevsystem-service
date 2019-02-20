@@ -1,6 +1,6 @@
 {
 	"name": "@intechprev/prevsystem-service",
-	"version": "1.4.0",
+	"version": "1.5.0",
 	"main": "index.js",
 	"repository": {
 		"type": "git",
@@ -14,7 +14,7 @@
 	},
 	"homepage": "https://github.com/intech-solucoes/prevsystem-service#readme",
 	"dependencies": {
-		"@intechprev/service": "^1.0.2"
+		"@intechprev/service": "^1.1.0"
 	},
 	"devDependencies": {},
 	"scripts": {
