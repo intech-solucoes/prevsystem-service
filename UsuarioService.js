@@ -26,7 +26,7 @@ class UsuarioService extends BaseService {
     }
 
     VerificarAdmin() {
-        return this.VerificarAdmin();
+        return super.VerificarAdmin();
     }
 
 }
