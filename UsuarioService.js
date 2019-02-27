@@ -29,6 +29,10 @@ class UsuarioService extends BaseService {
         return super.VerificarAdmin();
     }
 
+    SelecionarMatricula(matricula) { 
+        return this.CriarRequisicao("POST", `/usuario/selecionarMatricula/${matricula}`);
+    }
+
 }
 
 export default new UsuarioService();
