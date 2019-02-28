@@ -20,6 +20,15 @@ class FichaFinanceiraService extends BaseService {
     SabesprevBuscarSaldoPorPlano(cdPlano) {
         return this.CriarRequisicao("GET", `/fichaFinanceira/sabesprevSaldoPorPlano/${cdPlano}`);
     }
+
+    BuscarDatasInformePorFundacaoInscricao(fundacao, inscricao) {
+        return this.CriarRequisicao("GET", `/fichaFinanceira/datasPorFundacaoInscricao/${fundacao}/${inscricao}`);
+    }
+
+    BuscarInformePorFundacaoInscricaoAno(fundacao, inscricao, ano) {
+        return this.CriarRequisicao("GET", `/fichaFinanceira/informePorFundacaInscricaoAno/${fundacao}/${inscricao}/${ano}`);
+    }
+
 }
 
 export default new FichaFinanceiraService();
