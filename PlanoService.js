@@ -20,6 +20,10 @@ class PlanoService extends BaseService {
             return this.CriarRequisicaoBlob("GET", `/plano/relatorioExtratoPorPlanoEmpresaReferencia/${plano}/${empresa}/${this.FormatarData(dataInicio)}/${this.FormatarData(dataFim)}/${enviarPorEmail}`);
     }
 
+    RelatorioExtratoPorPlanoReferencia(plano, dataInicio, dataFim) {
+        return this.CriarRequisicaoBlob("GET", `/plano/relatorioExtratoPorPlanoReferencia/${plano}/${this.FormatarData(dataInicio)}/${this.FormatarData(dataFim)}`);
+    }
+
     RelatorioCertificado(plano, empresa, enviarPorEmail = false) {
         if(enviarPorEmail)
             return this.CriarRequisicao("GET", `/plano/certificado/${plano}/${empresa}/${enviarPorEmail}`);
