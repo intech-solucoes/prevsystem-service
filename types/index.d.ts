@@ -19,4 +19,5 @@ import RelacionamentoService from "./RelacionamentoService";
 import HistSaldoService from "./HistSaldoService";
 import FichaFechamentoPrevesService from "./FichaFechamentoPrevesService";
 import SalarioBaseService from "./SalarioBaseService";
-export { UsuarioService, FuncionarioService, PlanoService, DocumentoService, MensagemService, InfoRendService, RecadastramentoService, DependenteService, EmpresaService, SituacaoPlanoService, FundacaoService, ListasService, DadosPessoaisService, ProcessoBeneficioService, FichaFinanceiraService, FichaFinanceiraAssistidoService, ContratoService, RelacionamentoService, HistSaldoService, FichaFechamentoPrevesService, SalarioBaseService };
+import ContrachequeService from "./ContrachequeService";
+export { UsuarioService, FuncionarioService, PlanoService, DocumentoService, MensagemService, InfoRendService, RecadastramentoService, DependenteService, EmpresaService, SituacaoPlanoService, FundacaoService, ListasService, DadosPessoaisService, ProcessoBeneficioService, FichaFinanceiraService, FichaFinanceiraAssistidoService, ContratoService, RelacionamentoService, HistSaldoService, FichaFechamentoPrevesService, SalarioBaseService, ContrachequeService };

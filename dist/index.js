@@ -45,3 +45,5 @@ var FichaFechamentoPrevesService_1 = __importDefault(require("./FichaFechamentoP
 exports.FichaFechamentoPrevesService = FichaFechamentoPrevesService_1.default;
 var SalarioBaseService_1 = __importDefault(require("./SalarioBaseService"));
 exports.SalarioBaseService = SalarioBaseService_1.default;
+var ContrachequeService_1 = __importDefault(require("./ContrachequeService"));
+exports.ContrachequeService = ContrachequeService_1.default;

@@ -4,7 +4,7 @@
 	"main": "dist/index.js",
 	"typings": "./types/index.d.ts",
 	"dependencies": {
-		"@intechprev/service": "file:../lib/service"
+		"@intechprev/service": "file:../_lib/service"
 	},
 	"devDependencies": {
 		"@types/node": "10.12.18",
