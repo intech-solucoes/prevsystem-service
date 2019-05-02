@@ -11,7 +11,7 @@ class DocumentoService extends BaseService {
     BuscarPorPasta = (oidPasta = null) => this.CriarRequisicao(TipoRequisicao.GET, null, `porPasta/${oidPasta}`);
 
     Criar = (OID_ARQUIVO_UPLOAD: number, TXT_TITULO: string, IND_ATIVO: string, NUM_ORDEM: number, OID_DOCUMENTO_PASTA = null) =>
-        this.CriarRequisicao(TipoRequisicao.POST, null, "/documento", {
+        this.CriarRequisicao(TipoRequisicao.POST, null, "", {
             OID_ARQUIVO_UPLOAD,
             TXT_TITULO,
             IND_ATIVO,

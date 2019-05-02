@@ -25,7 +25,7 @@ var DocumentoService = /** @class */ (function (_super) {
         };
         _this.Criar = function (OID_ARQUIVO_UPLOAD, TXT_TITULO, IND_ATIVO, NUM_ORDEM, OID_DOCUMENTO_PASTA) {
             if (OID_DOCUMENTO_PASTA === void 0) { OID_DOCUMENTO_PASTA = null; }
-            return _this.CriarRequisicao(service_1.TipoRequisicao.POST, null, "/documento", {
+            return _this.CriarRequisicao(service_1.TipoRequisicao.POST, null, "", {
                 OID_ARQUIVO_UPLOAD: OID_ARQUIVO_UPLOAD,
                 TXT_TITULO: TXT_TITULO,
                 IND_ATIVO: IND_ATIVO,
