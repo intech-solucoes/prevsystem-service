@@ -12,9 +12,8 @@
 		"typescript": "3.2.4"
 	},
 	"scripts": {
-		"build-types": "yarn clean && tsc -d --declarationDir ./types",
-		"build": "yarn && yarn build-types && node ./node_modules/rimraf/bin.js ./node_modules",
-		"clean": "node ./node_modules/rimraf/bin.js ./types && node ./node_modules/rimraf/bin.js ./dist",
-		"npm:publish": "yarn build && npm publish --access public"
+		"build": "yarn && yarn clean && tsc -d --declarationDir ./types",
+        "clean": "rmdir /s /q dist && rmdir /s /q types",
+        "npm:publish": "yarn build && npm publish --access public"
 	}
 }

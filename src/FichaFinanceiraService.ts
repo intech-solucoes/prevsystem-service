@@ -8,6 +8,9 @@ class FichaFinanceiraService extends BaseService {
     
     BuscarUltimaPorPlano = (cdPlano: string) =>
         this.CriarRequisicao(TipoRequisicao.GET, null, `ultimaPorPlano/${cdPlano}`);
+    
+    BuscarUltimaExibicaoPorPlano = (cdPlano: string) =>
+        this.CriarRequisicao(TipoRequisicao.GET, null, `ultimaExibicaoPorPlano/${cdPlano}`);
 
     BuscarResumoAnosPorPlano = (cdPlano: string) =>
         this.CriarRequisicao(TipoRequisicao.GET, null, `resumoAnosPorPlano/${cdPlano}`);

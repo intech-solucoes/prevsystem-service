@@ -21,6 +21,9 @@ var FichaFinanceiraService = /** @class */ (function (_super) {
         _this.BuscarUltimaPorPlano = function (cdPlano) {
             return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "ultimaPorPlano/" + cdPlano);
         };
+        _this.BuscarUltimaExibicaoPorPlano = function (cdPlano) {
+            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "ultimaExibicaoPorPlano/" + cdPlano);
+        };
         _this.BuscarResumoAnosPorPlano = function (cdPlano) {
             return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "resumoAnosPorPlano/" + cdPlano);
         };
