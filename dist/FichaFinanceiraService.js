@@ -36,6 +36,9 @@ var FichaFinanceiraService = /** @class */ (function (_super) {
         _this.SabesprevBuscarSaldoPorPlano = function (cdPlano) {
             return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "sabesprevSaldoPorPlano/" + cdPlano);
         };
+        _this.SaoFranciscoBuscarSaldoPorPlano = function (cdPlano) {
+            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "saoFranciscoSaldoPorPlano/" + cdPlano);
+        };
         _this.BuscarDatasInformePorFundacaoInscricao = function (fundacao, inscricao) {
             return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "datasPorFundacaoInscricao/" + fundacao + "/" + inscricao);
         };

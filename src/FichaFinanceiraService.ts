@@ -24,6 +24,9 @@ class FichaFinanceiraService extends BaseService {
     SabesprevBuscarSaldoPorPlano = (cdPlano: string) =>
         this.CriarRequisicao(TipoRequisicao.GET, null, `sabesprevSaldoPorPlano/${cdPlano}`);
 
+    SaoFranciscoBuscarSaldoPorPlano = (cdPlano: string) =>
+        this.CriarRequisicao(TipoRequisicao.GET, null, `saoFranciscoSaldoPorPlano/${cdPlano}`);
+
     BuscarDatasInformePorFundacaoInscricao = (fundacao: string, inscricao: string) =>
         this.CriarRequisicao(TipoRequisicao.GET, null, `datasPorFundacaoInscricao/${fundacao}/${inscricao}`);
 
