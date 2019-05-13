@@ -11,6 +11,9 @@ class FichaFinanceiraAssistidoService extends BaseService {
 
     BuscarPorPlanoReferenciaTipoFolha = (cdPlano: string, referencia: string, tipoFolha: string) =>
         this.CriarRequisicao(TipoRequisicao.GET, null, `porPlanoReferenciaTipoFolha/${cdPlano}/${this.FormatarData(referencia)}/${tipoFolha}`);
+    
+    BuscarUltimaPorPlano = (cdPlano: string) =>
+        this.CriarRequisicao(TipoRequisicao.GET, null, `ultimaFolhaPorPlano/${cdPlano}`);
 }
 
 export default new FichaFinanceiraAssistidoService();

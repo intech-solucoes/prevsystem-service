@@ -24,6 +24,9 @@ var FichaFinanceiraAssistidoService = /** @class */ (function (_super) {
         _this.BuscarPorPlanoReferenciaTipoFolha = function (cdPlano, referencia, tipoFolha) {
             return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "porPlanoReferenciaTipoFolha/" + cdPlano + "/" + _this.FormatarData(referencia) + "/" + tipoFolha);
         };
+        _this.BuscarUltimaPorPlano = function (cdPlano) {
+            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "ultimaFolhaPorPlano/" + cdPlano);
+        };
         return _this;
     }
     return FichaFinanceiraAssistidoService;
