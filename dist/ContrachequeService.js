@@ -28,7 +28,7 @@ var ContrachequeService = /** @class */ (function (_super) {
     };
     ContrachequeService.prototype.Relatorio = function (cdPlano, referencia) {
         var tipoFolha = "1";
-        return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorio/" + cdPlano + "/" + this.FormatarData(referencia) + "/" + tipoFolha, null, service_1.TipoResposta.Blob);
+        return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorio/" + cdPlano + "/" + this.FormatarData(referencia) + "/" + tipoFolha);
     };
     return ContrachequeService;
 }(service_1.BaseService));

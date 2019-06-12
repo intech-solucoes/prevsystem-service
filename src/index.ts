@@ -17,9 +17,12 @@ import FichaFinanceiraAssistidoService from "./FichaFinanceiraAssistidoService";
 import ContratoService from "./ContratoService";
 import RelacionamentoService from "./RelacionamentoService";
 import HistSaldoService from "./HistSaldoService";
+import FichaFechamentoService from "./FichaFechamentoService";
 import FichaFechamentoPrevesService from "./FichaFechamentoPrevesService";
 import SalarioBaseService from "./SalarioBaseService";
 import ContrachequeService from "./ContrachequeService";
+import CalendarioPagamentoService from "./CalendarioPagamentoService";
+import NoticiasService from "./NoticiasService";
 
 export {
     UsuarioService,
@@ -41,7 +44,10 @@ export {
     ContratoService,
     RelacionamentoService,
     HistSaldoService,
+    FichaFechamentoService,
     FichaFechamentoPrevesService,
     SalarioBaseService,
-    ContrachequeService
+    ContrachequeService,
+    CalendarioPagamentoService,
+    NoticiasService
 };

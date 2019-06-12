@@ -21,6 +21,9 @@ var ContratoService = /** @class */ (function (_super) {
         _this.SabesprevBuscarAtivosPorPlano = function (cdPlano) {
             return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "sabesprevAtivosPorPlano/" + cdPlano);
         };
+        _this.SabesprevBuscarPorAnoNumDtaQuitacao = function (ano, num, dtaQuitacao) {
+            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "sabesprevPorAnoNumDataQuitacao/" + ano + "/" + num + "/" + _this.FormatarData(dtaQuitacao));
+        };
         _this.SabesprevBuscarPorAnoNum = function (ano, num) {
             return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "sabesprevPorAnoNum/" + ano + "/" + num);
         };
@@ -39,8 +42,14 @@ var ContratoService = /** @class */ (function (_super) {
         _this.SendToken = function (enviarEmail, enviarSMS) {
             return _this.CriarRequisicao(service_1.TipoRequisicao.POST, null, "gerarToken/" + enviarEmail + "/" + enviarSMS);
         };
+        _this.EnviarCAC = function (email, contrato) {
+            return _this.CriarRequisicao(service_1.TipoRequisicao.POST, null, "enviarCAC/" + email, contrato);
+        };
         _this.Contratar = function (params) {
             return _this.CriarRequisicao(service_1.TipoRequisicao.POST, null, "contratar", params);
+        };
+        _this.BuscarQuantidadeEmDeferimento = function () {
+            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "buscarQuantidadeEmDeferimento");
         };
         return _this;
     }

@@ -9,6 +9,9 @@ class ContratoService extends BaseService {
     SabesprevBuscarAtivosPorPlano = (cdPlano: string) => 
         this.CriarRequisicao(TipoRequisicao.GET, null, `sabesprevAtivosPorPlano/${cdPlano}`);
 
+    SabesprevBuscarPorAnoNumDtaQuitacao = (ano: string, num: string, dtaQuitacao: string) =>
+        this.CriarRequisicao(TipoRequisicao.GET, null, `sabesprevPorAnoNumDataQuitacao/${ano}/${num}/${this.FormatarData(dtaQuitacao)}`);
+
     SabesprevBuscarPorAnoNum = (ano: string, num: string) =>
         this.CriarRequisicao(TipoRequisicao.GET, null, `sabesprevPorAnoNum/${ano}/${num}`);
 
@@ -27,8 +30,14 @@ class ContratoService extends BaseService {
     SendToken = (enviarEmail: boolean, enviarSMS: boolean) =>
         this.CriarRequisicao(TipoRequisicao.POST, null, `gerarToken/${enviarEmail}/${enviarSMS}`);
 
+    EnviarCAC = (email: string, contrato: any) => 
+        this.CriarRequisicao(TipoRequisicao.POST, null, `enviarCAC/${email}`, contrato);
+
     Contratar = (params: any) =>
         this.CriarRequisicao(TipoRequisicao.POST, null, `contratar`, params);
+
+    BuscarQuantidadeEmDeferimento = () => 
+        this.CriarRequisicao(TipoRequisicao.GET, null, "buscarQuantidadeEmDeferimento");
     
 }
 

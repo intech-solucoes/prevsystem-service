@@ -6,7 +6,9 @@ class CalendarioPagamentoService extends BaseService {
         super("calendarioPagamento");
     }
     
-    Buscar = (cdPlano: string) =>
+    Buscar = () =>
         this.CriarRequisicao(TipoRequisicao.GET);
 
 }
+
+export default new CalendarioPagamentoService();

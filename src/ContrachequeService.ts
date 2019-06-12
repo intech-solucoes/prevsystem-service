@@ -1,4 +1,4 @@
-import { BaseService, TipoRequisicao, TipoResposta } from "@intechprev/service";
+import { BaseService, TipoRequisicao } from "@intechprev/service";
 
 class ContrachequeService extends BaseService {
     constructor() { 
@@ -16,7 +16,7 @@ class ContrachequeService extends BaseService {
 
     Relatorio(cdPlano: string, referencia: string) {
         var tipoFolha = "1";
-        return this.CriarRequisicao(TipoRequisicao.GET, null, `relatorio/${cdPlano}/${this.FormatarData(referencia)}/${tipoFolha}`, null, TipoResposta.Blob);
+        return this.CriarRequisicao(TipoRequisicao.GET, null, `relatorio/${cdPlano}/${this.FormatarData(referencia)}/${tipoFolha}`);
     }
 }
 
