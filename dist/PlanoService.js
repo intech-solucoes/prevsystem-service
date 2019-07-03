@@ -37,7 +37,7 @@ var PlanoService = /** @class */ (function (_super) {
             return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorioExtratoPorPlanoEmpresaReferencia/" + plano + "/" + empresa + "/" + this.FormatarData(dataInicio) + "/" + this.FormatarData(dataFim) + "/" + enviarPorEmail, service_1.TipoResposta.Blob);
     };
     PlanoService.prototype.RelatorioExtratoPorPlanoReferencia = function (plano, dataInicio, dataFim) {
-        return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorioExtratoPorPlanoReferencia/" + plano + "/" + this.FormatarData(dataInicio) + "/" + this.FormatarData(dataFim));
+        return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorioExtratoPorPlanoReferencia/" + plano + "/" + this.FormatarData(dataInicio) + "/" + this.FormatarData(dataFim), null, service_1.TipoResposta.Blob);
     };
     PlanoService.prototype.RelatorioCertificado = function (plano, empresa, enviarPorEmail) {
         if (enviarPorEmail === void 0) { enviarPorEmail = false; }

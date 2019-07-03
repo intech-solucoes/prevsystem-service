@@ -22,13 +22,11 @@ var ContrachequeService = /** @class */ (function (_super) {
     ContrachequeService.prototype.BuscarDatas = function (cdPlano) {
         return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "datasPorPlano/" + cdPlano);
     };
-    ContrachequeService.prototype.BuscarPorPlanoReferenciaTipoFolha = function (cdPlano, referencia) {
-        var tipoFolha = "1";
+    ContrachequeService.prototype.BuscarPorPlanoReferenciaTipoFolha = function (cdPlano, referencia, tipoFolha) {
         return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "porPlanoReferenciaTipoFolha/" + cdPlano + "/" + this.FormatarData(referencia) + "/" + tipoFolha);
     };
-    ContrachequeService.prototype.Relatorio = function (cdPlano, referencia) {
-        var tipoFolha = "1";
-        return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorio/" + cdPlano + "/" + this.FormatarData(referencia) + "/" + tipoFolha);
+    ContrachequeService.prototype.Relatorio = function (cdPlano, referencia, tipoFolha) {
+        return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorio/" + cdPlano + "/" + this.FormatarData(referencia) + "/" + tipoFolha, null, service_1.TipoResposta.Blob);
     };
     return ContrachequeService;
 }(service_1.BaseService));

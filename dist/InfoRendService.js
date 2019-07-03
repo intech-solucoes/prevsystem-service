@@ -25,7 +25,7 @@ var InfoRendService = /** @class */ (function (_super) {
             return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "porReferencia/" + referencia);
         };
         _this.Relatorio = function (referencia) {
-            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorio/" + referencia, service_1.TipoResposta.Blob);
+            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorio/" + referencia, null, service_1.TipoResposta.Blob);
         };
         return _this;
     }

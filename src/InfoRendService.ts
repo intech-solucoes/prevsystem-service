@@ -13,7 +13,7 @@ class InfoRendService extends BaseService {
         this.CriarRequisicao(TipoRequisicao.GET, null, `porReferencia/${referencia}`);
 
     Relatorio = (referencia: string) =>
-        this.CriarRequisicao(TipoRequisicao.GET, null, `relatorio/${referencia}`, TipoResposta.Blob);
+        this.CriarRequisicao(TipoRequisicao.GET, null, `relatorio/${referencia}`, null, TipoResposta.Blob);
 }
 
 export default new InfoRendService();
