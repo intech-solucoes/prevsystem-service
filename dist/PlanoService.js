@@ -27,6 +27,9 @@ var PlanoService = /** @class */ (function (_super) {
         _this.BuscarPorCodigo = function (plano) {
             return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "porCodigo/" + plano);
         };
+        _this.BuscarSaldado = function () {
+            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "saldado");
+        };
         return _this;
     }
     PlanoService.prototype.RelatorioExtratoPorPlanoEmpresaReferencia = function (plano, empresa, dataInicio, dataFim, enviarPorEmail) {

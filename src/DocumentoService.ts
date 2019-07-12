@@ -9,13 +9,15 @@ class DocumentoService extends BaseService {
     BuscarPorOidDocumento = (oidDocumento: number) => this.CriarRequisicao(TipoRequisicao.GET, null, `buscarPorOidDocumento/${oidDocumento}`);
 
     BuscarPorPasta = (oidPasta = null) => this.CriarRequisicao(TipoRequisicao.GET, null, `porPasta/${oidPasta}`);
+    BuscarPorPlanoPasta = (cdPlano: string, oidPasta = null) => this.CriarRequisicao(TipoRequisicao.GET, null, `porPlanoPasta/${cdPlano}/${oidPasta}`);
 
-    Criar = (OID_ARQUIVO_UPLOAD: number, TXT_TITULO: string, IND_ATIVO: string, NUM_ORDEM: number, OID_DOCUMENTO_PASTA = null) =>
+    Criar = (OID_ARQUIVO_UPLOAD: number, TXT_TITULO: string, IND_ATIVO: string, NUM_ORDEM: number, CD_PLANO = null, OID_DOCUMENTO_PASTA = null) =>
         this.CriarRequisicao(TipoRequisicao.POST, null, "", {
             OID_ARQUIVO_UPLOAD,
             TXT_TITULO,
             IND_ATIVO,
             NUM_ORDEM,
+            CD_PLANO,
             OID_DOCUMENTO_PASTA
         });
 

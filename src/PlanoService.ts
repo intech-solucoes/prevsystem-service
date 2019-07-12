@@ -14,6 +14,9 @@ class PlanoService extends BaseService {
 
     BuscarPorCodigo = (plano: string) =>
         this.CriarRequisicao(TipoRequisicao.GET, null, `porCodigo/${plano}`);
+    
+    BuscarSaldado = () =>
+        this.CriarRequisicao(TipoRequisicao.GET, null, "saldado");
 
     RelatorioExtratoPorPlanoEmpresaReferencia(plano: string, empresa: string, dataInicio: string, dataFim: string, enviarPorEmail = false) {
         if(enviarPorEmail)

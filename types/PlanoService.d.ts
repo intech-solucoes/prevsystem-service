@@ -4,6 +4,7 @@ declare class PlanoService extends BaseService {
     Buscar: () => Promise<any>;
     BuscarTodos: () => Promise<any>;
     BuscarPorCodigo: (plano: string) => Promise<any>;
+    BuscarSaldado: () => Promise<any>;
     RelatorioExtratoPorPlanoEmpresaReferencia(plano: string, empresa: string, dataInicio: string, dataFim: string, enviarPorEmail?: boolean): Promise<any>;
     RelatorioExtratoPorPlanoReferencia(plano: string, dataInicio: string, dataFim: string): Promise<any>;
     RelatorioCertificado(plano: string, empresa: string, enviarPorEmail?: boolean): Promise<any>;

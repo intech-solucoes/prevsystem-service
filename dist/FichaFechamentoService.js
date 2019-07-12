@@ -19,6 +19,7 @@ var FichaFechamentoService = /** @class */ (function (_super) {
     function FichaFechamentoService() {
         var _this = _super.call(this, "fichaFechamento") || this;
         _this.BuscarSaldoPorPlano = function (cdPlano) { return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "porPlano/" + cdPlano); };
+        _this.BuscarDatasExtrato = function (cdPlano) { return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "datasExtrato/" + cdPlano); };
         return _this;
     }
     return FichaFechamentoService;

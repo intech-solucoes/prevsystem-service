@@ -7,6 +7,7 @@ class FichaFechamentoService extends BaseService {
     }
     
     BuscarSaldoPorPlano = (cdPlano: string) => this.CriarRequisicao(TipoRequisicao.GET, null, `porPlano/${cdPlano}`);
+    BuscarDatasExtrato = (cdPlano: string) => this.CriarRequisicao(TipoRequisicao.GET, null, `datasExtrato/${cdPlano}`);
 }
 
 export default new FichaFechamentoService();
