@@ -23,6 +23,7 @@ import SalarioBaseService from "./SalarioBaseService";
 import ContrachequeService from "./ContrachequeService";
 import CalendarioPagamentoService from "./CalendarioPagamentoService";
 import NoticiasService from "./NoticiasService";
+import LGPDService from "./LGPDService";
 
 export {
     UsuarioService,
@@ -49,5 +50,6 @@ export {
     SalarioBaseService,
     ContrachequeService,
     CalendarioPagamentoService,
-    NoticiasService
+    NoticiasService,
+    LGPDService
 };
