@@ -7,6 +7,7 @@ declare class UsuarioService extends BaseService {
     LoginSemSenha(cpf: string): Promise<any>;
     PrimeiroAcesso(cpf: string, dataNascimento: string): Promise<any>;
     TrocarSenha(senhaAntiga: string, senhaNova: string): Promise<any>;
+    TrocarSenhaPrimeiroAcesso(senhaNova: string): Promise<any>;
     SelecionarParticipante(cpf: string): Promise<any>;
     SelecionarMatricula(matricula: string): Promise<any>;
 }

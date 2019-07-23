@@ -30,6 +30,10 @@ class UsuarioService extends BaseService {
         return this.CriarRequisicao(TipoRequisicao.POST, null, "alterarSenha", { senhaAntiga: senhaAntiga, senhaNova: senhaNova });
     }
 
+    TrocarSenhaPrimeiroAcesso(senhaNova: string) {
+        return this.CriarRequisicao(TipoRequisicao.POST, null, "alterarSenhaPrimeiroAcesso", { senhaNova: senhaNova });
+    }
+
     SelecionarParticipante(cpf: string) {
         return this.CriarRequisicao(TipoRequisicao.POST, null, "selecionar", { Cpf: cpf });
     }
