@@ -23,4 +23,5 @@ import SalarioBaseService from "./SalarioBaseService";
 import ContrachequeService from "./ContrachequeService";
 import CalendarioPagamentoService from "./CalendarioPagamentoService";
 import NoticiasService from "./NoticiasService";
-export { UsuarioService, FuncionarioService, PlanoService, DocumentoService, MensagemService, InfoRendService, RecadastramentoService, DependenteService, EmpresaService, SituacaoPlanoService, FundacaoService, ListasService, DadosPessoaisService, ProcessoBeneficioService, FichaFinanceiraService, FichaFinanceiraAssistidoService, ContratoService, RelacionamentoService, HistSaldoService, FichaFechamentoService, FichaFechamentoPrevesService, SalarioBaseService, ContrachequeService, CalendarioPagamentoService, NoticiasService };
+import LGPDService from "./LGPDService";
+export { UsuarioService, FuncionarioService, PlanoService, DocumentoService, MensagemService, InfoRendService, RecadastramentoService, DependenteService, EmpresaService, SituacaoPlanoService, FundacaoService, ListasService, DadosPessoaisService, ProcessoBeneficioService, FichaFinanceiraService, FichaFinanceiraAssistidoService, ContratoService, RelacionamentoService, HistSaldoService, FichaFechamentoService, FichaFechamentoPrevesService, SalarioBaseService, ContrachequeService, CalendarioPagamentoService, NoticiasService, LGPDService };

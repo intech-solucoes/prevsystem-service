@@ -37,6 +37,9 @@ var UsuarioService = /** @class */ (function (_super) {
     UsuarioService.prototype.TrocarSenha = function (senhaAntiga, senhaNova) {
         return this.CriarRequisicao(service_1.TipoRequisicao.POST, null, "alterarSenha", { senhaAntiga: senhaAntiga, senhaNova: senhaNova });
     };
+    UsuarioService.prototype.TrocarSenhaPrimeiroAcesso = function (senhaNova) {
+        return this.CriarRequisicao(service_1.TipoRequisicao.POST, null, "alterarSenhaPrimeiroAcesso", { senhaNova: senhaNova });
+    };
     UsuarioService.prototype.SelecionarParticipante = function (cpf) {
         return this.CriarRequisicao(service_1.TipoRequisicao.POST, null, "selecionar", { Cpf: cpf });
     };
