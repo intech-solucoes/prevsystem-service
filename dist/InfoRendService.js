@@ -24,8 +24,12 @@ var InfoRendService = /** @class */ (function (_super) {
         _this.BuscarPorReferencia = function (referencia) {
             return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "porReferencia/" + referencia);
         };
-        _this.Relatorio = function (referencia) {
-            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorio/" + referencia, null, service_1.TipoResposta.Blob);
+        _this.Relatorio = function (referencia, enviarPorEmail) {
+            if (enviarPorEmail === void 0) { enviarPorEmail = false; }
+            if (enviarPorEmail)
+                return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorio/" + referencia + "/" + enviarPorEmail, null);
+            else
+                return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorio/" + referencia + "/" + enviarPorEmail, null, service_1.TipoResposta.Blob);
         };
         return _this;
     }

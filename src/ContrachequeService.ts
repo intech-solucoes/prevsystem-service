@@ -13,8 +13,11 @@ class ContrachequeService extends BaseService {
         return this.CriarRequisicao(TipoRequisicao.GET, null, `porPlanoReferenciaTipoFolha/${cdPlano}/${this.FormatarData(referencia)}/${tipoFolha}`);
     }
 
-    Relatorio(cdPlano: string, referencia: string, tipoFolha: string) {
-        return this.CriarRequisicao(TipoRequisicao.GET, null, `relatorio/${cdPlano}/${this.FormatarData(referencia)}/${tipoFolha}`, null, TipoResposta.Blob);
+    Relatorio(cdPlano: string, referencia: string, tipoFolha: string, enviarPorEmail = false) {
+        if(enviarPorEmail)
+            return this.CriarRequisicao(TipoRequisicao.GET, null, `relatorio/${cdPlano}/${this.FormatarData(referencia)}/${tipoFolha}/${enviarPorEmail}`, null);
+        else
+            return this.CriarRequisicao(TipoRequisicao.GET, null, `relatorio/${cdPlano}/${this.FormatarData(referencia)}/${tipoFolha}/${enviarPorEmail}`, null, TipoResposta.Blob);
     }
 }
 

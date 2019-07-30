@@ -25,8 +25,12 @@ var ContrachequeService = /** @class */ (function (_super) {
     ContrachequeService.prototype.BuscarPorPlanoReferenciaTipoFolha = function (cdPlano, referencia, tipoFolha) {
         return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "porPlanoReferenciaTipoFolha/" + cdPlano + "/" + this.FormatarData(referencia) + "/" + tipoFolha);
     };
-    ContrachequeService.prototype.Relatorio = function (cdPlano, referencia, tipoFolha) {
-        return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorio/" + cdPlano + "/" + this.FormatarData(referencia) + "/" + tipoFolha, null, service_1.TipoResposta.Blob);
+    ContrachequeService.prototype.Relatorio = function (cdPlano, referencia, tipoFolha, enviarPorEmail) {
+        if (enviarPorEmail === void 0) { enviarPorEmail = false; }
+        if (enviarPorEmail)
+            return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorio/" + cdPlano + "/" + this.FormatarData(referencia) + "/" + tipoFolha + "/" + enviarPorEmail, null);
+        else
+            return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorio/" + cdPlano + "/" + this.FormatarData(referencia) + "/" + tipoFolha + "/" + enviarPorEmail, null, service_1.TipoResposta.Blob);
     };
     return ContrachequeService;
 }(service_1.BaseService));
