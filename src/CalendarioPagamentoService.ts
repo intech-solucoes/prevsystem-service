@@ -8,6 +8,9 @@ class CalendarioPagamentoService extends BaseService {
     
     Buscar = () =>
         this.CriarRequisicao(TipoRequisicao.GET);
+    
+    BuscarPorPlano = (cdPlano: string) =>
+        this.CriarRequisicao(TipoRequisicao.GET, null, `porPlano/${cdPlano}`);
 
 }
 

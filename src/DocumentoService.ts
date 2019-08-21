@@ -30,7 +30,7 @@ class DocumentoService extends BaseService {
         this.CriarRequisicao(TipoRequisicao.POST, null, `deletarPasta/${OID_DOCUMENTO_PASTA}`);
 
     Download = (OID_DOCUMENTO: number) =>
-        this.CriarRequisicao(TipoRequisicao.GET, null, `download/${OID_DOCUMENTO}`, TipoResposta.Blob);
+        this.CriarRequisicao(TipoRequisicao.GET, null, `download/${OID_DOCUMENTO}`, null, TipoResposta.Blob);
 
     EnviarDocumento = (OID_DOCUMENTO : number) =>
         this.CriarRequisicao(TipoRequisicao.GET, null, `enviarDocumento/${OID_DOCUMENTO}`);

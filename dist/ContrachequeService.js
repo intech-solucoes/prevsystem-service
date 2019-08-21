@@ -25,12 +25,15 @@ var ContrachequeService = /** @class */ (function (_super) {
     ContrachequeService.prototype.BuscarPorPlanoReferenciaTipoFolha = function (cdPlano, referencia, tipoFolha) {
         return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "porPlanoReferenciaTipoFolha/" + cdPlano + "/" + this.FormatarData(referencia) + "/" + tipoFolha);
     };
-    ContrachequeService.prototype.Relatorio = function (cdPlano, referencia, tipoFolha, enviarPorEmail) {
+    ContrachequeService.prototype.BuscarPorPlanoReferenciaTipoFolhaEspecie = function (cdPlano, referencia, tipoFolha, especie) {
+        return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "porPlanoReferenciaTipoFolha/" + cdPlano + "/" + this.FormatarData(referencia) + "/" + tipoFolha + "/" + especie);
+    };
+    ContrachequeService.prototype.Relatorio = function (cdPlano, referencia, tipoFolha, especie, enviarPorEmail) {
         if (enviarPorEmail === void 0) { enviarPorEmail = false; }
         if (enviarPorEmail)
-            return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorio/" + cdPlano + "/" + this.FormatarData(referencia) + "/" + tipoFolha + "/" + enviarPorEmail, null);
+            return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorio/" + cdPlano + "/" + this.FormatarData(referencia) + "/" + tipoFolha + "/" + especie + "/" + enviarPorEmail, null);
         else
-            return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorio/" + cdPlano + "/" + this.FormatarData(referencia) + "/" + tipoFolha + "/" + enviarPorEmail, null, service_1.TipoResposta.Blob);
+            return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorio/" + cdPlano + "/" + this.FormatarData(referencia) + "/" + tipoFolha + "/" + especie + "/" + enviarPorEmail, null, service_1.TipoResposta.Blob);
     };
     return ContrachequeService;
 }(service_1.BaseService));

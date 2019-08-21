@@ -21,6 +21,9 @@ var CalendarioPagamentoService = /** @class */ (function (_super) {
         _this.Buscar = function () {
             return _this.CriarRequisicao(service_1.TipoRequisicao.GET);
         };
+        _this.BuscarPorPlano = function (cdPlano) {
+            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "porPlano/" + cdPlano);
+        };
         return _this;
     }
     return CalendarioPagamentoService;

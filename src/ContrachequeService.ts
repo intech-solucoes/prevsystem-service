@@ -13,11 +13,15 @@ class ContrachequeService extends BaseService {
         return this.CriarRequisicao(TipoRequisicao.GET, null, `porPlanoReferenciaTipoFolha/${cdPlano}/${this.FormatarData(referencia)}/${tipoFolha}`);
     }
 
-    Relatorio(cdPlano: string, referencia: string, tipoFolha: string, enviarPorEmail = false) {
+    BuscarPorPlanoReferenciaTipoFolhaEspecie(cdPlano: string , referencia: string, tipoFolha: string, especie: string) {
+        return this.CriarRequisicao(TipoRequisicao.GET, null, `porPlanoReferenciaTipoFolha/${cdPlano}/${this.FormatarData(referencia)}/${tipoFolha}/${especie}`);
+    }
+
+    Relatorio(cdPlano: string, referencia: string, tipoFolha: string, especie: string, enviarPorEmail = false) {
         if(enviarPorEmail)
-            return this.CriarRequisicao(TipoRequisicao.GET, null, `relatorio/${cdPlano}/${this.FormatarData(referencia)}/${tipoFolha}/${enviarPorEmail}`, null);
+            return this.CriarRequisicao(TipoRequisicao.GET, null, `relatorio/${cdPlano}/${this.FormatarData(referencia)}/${tipoFolha}/${especie}/${enviarPorEmail}`, null);
         else
-            return this.CriarRequisicao(TipoRequisicao.GET, null, `relatorio/${cdPlano}/${this.FormatarData(referencia)}/${tipoFolha}/${enviarPorEmail}`, null, TipoResposta.Blob);
+            return this.CriarRequisicao(TipoRequisicao.GET, null, `relatorio/${cdPlano}/${this.FormatarData(referencia)}/${tipoFolha}/${especie}/${enviarPorEmail}`, null, TipoResposta.Blob);
     }
 }
 

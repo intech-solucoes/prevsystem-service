@@ -10,6 +10,7 @@ declare class UsuarioService extends BaseService {
     TrocarSenhaPrimeiroAcesso(senhaNova: string): Promise<any>;
     SelecionarParticipante(cpf: string): Promise<any>;
     SelecionarMatricula(matricula: string): Promise<any>;
+    BuscarMatriculas(): Promise<any>;
 }
 declare const _default: UsuarioService;
 export default _default;

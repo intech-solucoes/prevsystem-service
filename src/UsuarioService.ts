@@ -42,6 +42,10 @@ class UsuarioService extends BaseService {
         return this.CriarRequisicao(TipoRequisicao.POST, null, `selecionarMatricula/${matricula}`);
     }
 
+    BuscarMatriculas() { 
+        return this.CriarRequisicao(TipoRequisicao.GET, null, `matriculas`);
+    }
+
 }
 
 export default new UsuarioService();

@@ -48,7 +48,7 @@ var DocumentoService = /** @class */ (function (_super) {
             return _this.CriarRequisicao(service_1.TipoRequisicao.POST, null, "deletarPasta/" + OID_DOCUMENTO_PASTA);
         };
         _this.Download = function (OID_DOCUMENTO) {
-            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "download/" + OID_DOCUMENTO, service_1.TipoResposta.Blob);
+            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "download/" + OID_DOCUMENTO, null, service_1.TipoResposta.Blob);
         };
         _this.EnviarDocumento = function (OID_DOCUMENTO) {
             return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "enviarDocumento/" + OID_DOCUMENTO);

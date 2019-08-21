@@ -4,6 +4,7 @@ declare class FichaFinanceiraAssistidoService extends BaseService {
     BuscarDatasPorPlano: (cdPlano: string) => Promise<any>;
     BuscarPorPlanoReferenciaTipoFolha: (cdPlano: string, referencia: string, tipoFolha: string) => Promise<any>;
     BuscarUltimaPorPlano: (cdPlano: string) => Promise<any>;
+    BuscarUltimaPorPlanoProcesso: (cdPlano: string, cdEspecie: string, ano: string, num: string) => Promise<any>;
 }
 declare const _default: FichaFinanceiraAssistidoService;
 export default _default;

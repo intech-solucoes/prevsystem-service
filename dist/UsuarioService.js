@@ -46,6 +46,9 @@ var UsuarioService = /** @class */ (function (_super) {
     UsuarioService.prototype.SelecionarMatricula = function (matricula) {
         return this.CriarRequisicao(service_1.TipoRequisicao.POST, null, "selecionarMatricula/" + matricula);
     };
+    UsuarioService.prototype.BuscarMatriculas = function () {
+        return this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "matriculas");
+    };
     return UsuarioService;
 }(service_1.BaseService));
 exports.default = new UsuarioService();
