@@ -30,6 +30,12 @@ var PlanoService = /** @class */ (function (_super) {
         _this.BuscarSaldado = function () {
             return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "saldado");
         };
+        _this.ExtratoCodeprev = function () {
+            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "ExtratoCodeprev");
+        };
+        _this.ExtratoSaldado = function () {
+            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "ExtratoSaldado");
+        };
         _this.RelatorioExtratoPorPlanoReferencia = function (plano, dataInicio, dataFim, enviarPorEmail) {
             if (enviarPorEmail === void 0) { enviarPorEmail = false; }
             if (enviarPorEmail)

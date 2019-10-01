@@ -25,6 +25,12 @@ class PlanoService extends BaseService {
             return this.CriarRequisicao(TipoRequisicao.GET, null, `relatorioExtratoPorPlanoEmpresaReferencia/${plano}/${empresa}/${this.FormatarData(dataInicio)}/${this.FormatarData(dataFim)}/${enviarPorEmail}`, TipoResposta.Blob);
     }
 
+    ExtratoCodeprev = () =>
+        this.CriarRequisicao(TipoRequisicao.GET, null, `ExtratoCodeprev`);
+
+    ExtratoSaldado = () =>
+        this.CriarRequisicao(TipoRequisicao.GET, null, `ExtratoSaldado`);
+
     RelatorioExtratoPorPlanoReferencia = (plano: string, dataInicio: string, dataFim: string, enviarPorEmail = false) => {
         if(enviarPorEmail)
             return this.CriarRequisicao(TipoRequisicao.GET, null, `relatorioExtratoPorPlanoReferencia/${plano}/${this.FormatarData(dataInicio)}/${this.FormatarData(dataFim)}/${enviarPorEmail}`, null);

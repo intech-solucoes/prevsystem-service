@@ -4,7 +4,7 @@
 	"main": "dist/index.js",
 	"typings": "./types/index.d.ts",
 	"dependencies": {
-		"@intechprev/service": "file:../_lib/service"
+		"@intechprev/service": "2.0.0"
 	},
 	"devDependencies": {
 		"@types/node": "10.12.18",
@@ -13,7 +13,7 @@
 	},
 	"scripts": {
 		"build": "yarn && yarn clean && tsc -d --declarationDir ./types",
-        "clean": "rmdir /s /q dist && rmdir /s /q types",
-        "npm:publish": "yarn build && npm publish --access public"
+		"clean": "rmdir /s /q dist && rmdir /s /q types",
+		"npm:publish": "yarn build && npm publish --access public"
 	}
 }
