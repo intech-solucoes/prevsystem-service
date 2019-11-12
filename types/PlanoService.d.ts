@@ -13,6 +13,8 @@ declare class PlanoService extends BaseService {
     BuscarPorEmpresa(empresa: string): Promise<any>;
     RelatorioCertificadoSeguro(enviarPorEmail?: boolean): Promise<any>;
     PossuiCertificadoSeguro(): Promise<any>;
+    Pagina: (cdPlano: string) => Promise<any>;
+    Rentabilidade: () => Promise<any>;
 }
 declare const _default: PlanoService;
 export default _default;

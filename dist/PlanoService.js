@@ -43,6 +43,12 @@ var PlanoService = /** @class */ (function (_super) {
             else
                 return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "relatorioExtratoPorPlanoReferencia/" + plano + "/" + _this.FormatarData(dataInicio) + "/" + _this.FormatarData(dataFim) + "/" + enviarPorEmail, null, service_1.TipoResposta.Blob);
         };
+        _this.Pagina = function (cdPlano) {
+            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "pagina/" + cdPlano);
+        };
+        _this.Rentabilidade = function () {
+            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "rentabilidade");
+        };
         return _this;
     }
     PlanoService.prototype.RelatorioExtratoPorPlanoEmpresaReferencia = function (plano, empresa, dataInicio, dataFim, enviarPorEmail) {

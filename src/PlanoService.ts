@@ -60,6 +60,12 @@ class PlanoService extends BaseService {
         return this.CriarRequisicao(TipoRequisicao.GET, null, `possuiCertificadoSeguro`);
     }
 
+    Pagina = (cdPlano: string) =>
+        this.CriarRequisicao(TipoRequisicao.GET, null, `pagina/${cdPlano}`);
+
+    Rentabilidade = () =>
+        this.CriarRequisicao(TipoRequisicao.GET, null, `rentabilidade`);
+
 }
 
 export default new PlanoService();
