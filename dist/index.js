@@ -55,3 +55,5 @@ var NoticiasService_1 = __importDefault(require("./NoticiasService"));
 exports.NoticiasService = NoticiasService_1.default;
 var LGPDService_1 = __importDefault(require("./LGPDService"));
 exports.LGPDService = LGPDService_1.default;
+var SimuladorCodeprevService_1 = __importDefault(require("./SimuladorCodeprevService"));
+exports.SimuladorCodeprevService = SimuladorCodeprevService_1.default;

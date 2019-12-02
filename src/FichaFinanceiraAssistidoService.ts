@@ -14,6 +14,9 @@ class FichaFinanceiraAssistidoService extends BaseService {
     
     BuscarUltimaPorPlano = (cdPlano: string) =>
         this.CriarRequisicao(TipoRequisicao.GET, null, `ultimaFolhaPorPlano/${cdPlano}`);
+
+    BuscarUltimaPorPlanoEspecie = (cdPlano: string, cdEspecie: string) =>
+        this.CriarRequisicao(TipoRequisicao.GET, null, `ultimaFolhaPorPlano/${cdPlano}/${cdEspecie}`);
     
     BuscarUltimaPorPlanoProcesso = (cdPlano: string, cdEspecie: string, ano: string, num: string) =>
         this.CriarRequisicao(TipoRequisicao.GET, null, `ultimaFolhaPorPlanoProcesso/${cdPlano}/${cdEspecie}/${ano}/${num}`);

@@ -24,6 +24,7 @@ import ContrachequeService from "./ContrachequeService";
 import CalendarioPagamentoService from "./CalendarioPagamentoService";
 import NoticiasService from "./NoticiasService";
 import LGPDService from "./LGPDService";
+import SimuladorCodeprevService from "./SimuladorCodeprevService";
 
 export {
     UsuarioService,
@@ -51,5 +52,6 @@ export {
     ContrachequeService,
     CalendarioPagamentoService,
     NoticiasService,
-    LGPDService
+    LGPDService,
+    SimuladorCodeprevService
 };
