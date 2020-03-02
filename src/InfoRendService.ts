@@ -9,10 +9,10 @@ class InfoRendService extends BaseService {
     BuscarReferencias = () =>
         this.CriarRequisicao(TipoRequisicao.GET, null, `referencias`);
     
-    BuscarPorReferencia = (referencia: string) =>
+    BuscarPorReferencia = (referencia: number) =>
         this.CriarRequisicao(TipoRequisicao.GET, null, `porReferencia/${referencia}`);
 
-    Relatorio = (referencia: string, enviarPorEmail = false) => {
+    Relatorio = (referencia: number, enviarPorEmail = false) => {
         if(enviarPorEmail)
             return this.CriarRequisicao(TipoRequisicao.GET, null, `relatorio/${referencia}/${enviarPorEmail}`, null);
         else
