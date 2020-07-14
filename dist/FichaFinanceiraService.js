@@ -45,6 +45,15 @@ var FichaFinanceiraService = /** @class */ (function (_super) {
         _this.BuscarInformePorFundacaoInscricaoAno = function (fundacao, inscricao, ano) {
             return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "informePorFundacaInscricaoAno/" + fundacao + "/" + inscricao + "/" + ano);
         };
+        _this.BuscarDatasInforme = function () {
+            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "BuscarDatasInforme");
+        };
+        _this.BuscarInformePorAno = function (ano) {
+            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "BuscarInformePorAno/" + ano);
+        };
+        _this.EnviarDeclaracaoIR = function (ano, email) {
+            return _this.CriarRequisicao(service_1.TipoRequisicao.GET, null, "EnviarDeclaracaoIR/" + ano + "/" + email);
+        };
         return _this;
     }
     return FichaFinanceiraService;

@@ -10,6 +10,9 @@ declare class FichaFinanceiraService extends BaseService {
     SaoFranciscoBuscarSaldoPorPlano: (cdPlano: string) => Promise<any>;
     BuscarDatasInformePorFundacaoInscricao: (fundacao: string, inscricao: string) => Promise<any>;
     BuscarInformePorFundacaoInscricaoAno: (fundacao: string, inscricao: string, ano: string) => Promise<any>;
+    BuscarDatasInforme: () => Promise<any>;
+    BuscarInformePorAno: (ano: number) => Promise<any>;
+    EnviarDeclaracaoIR: (ano: number, email: string) => Promise<any>;
 }
 declare const _default: FichaFinanceiraService;
 export default _default;
